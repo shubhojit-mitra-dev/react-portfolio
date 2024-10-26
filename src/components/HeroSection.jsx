@@ -17,7 +17,7 @@ const HeroSection = () => {
             Front-End Developer dedicated to creating seamless, user-centered web experiences through clean code, intuitive design, and a passion for innovation.
           </p>
           <div className='mt-10 flex flex-wrap justify-center space-y-0 space-x-5 sm:space-y-0 sm:space-x-10'>
-            <CustomButton content="Download CV" icon={downloadIcon} variant="blue" size={isSmallScreen ? 'm' : 'xl'} link="/resume.pdf" />
+            <CustomButton content="Download CV" icon={downloadIcon} variant="blue" size={isSmallScreen ? 'm' : 'xl'} link="%PUBLIC_URL%/resume.pdf" />
             <CustomButton content="Contact Me" icon={contactIcon} variant="white" size={isSmallScreen ? 'm' : 'xl'} link="#contact" />
           </div>
         </div>
