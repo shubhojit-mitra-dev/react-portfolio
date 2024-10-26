@@ -19,6 +19,7 @@ build
 *.local
 .env
 .env.*.local
+.vite
 
 # Editor directories and files
 .vscode/
