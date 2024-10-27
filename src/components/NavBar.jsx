@@ -20,7 +20,7 @@ const NavBar = () => {
         <nav className="bg-black p-4 sticky top-0 px-8 sm:px-20 z-50">
             <div className="container mx-auto flex justify-between items-center">
                 <div className='flex items-center space-x-3'>
-                    <a href="#home" className="text-white text-3xl font-bold font-mono" onClick={(e) => handleScroll('hero', e)}>&lt;shubhojitMitra /&gt;</a>
+                    <a href="#home" className="text-white text-3xl font-bold font-mono glowing-text" onClick={(e) => handleScroll('hero', e)}>&lt;ShubhojitMitra /&gt;</a>
                 </div>
                 <div className="hidden sm:flex space-x-2 sm:space-x-8 font-bold">
                     <a href="#home" className="underline-animation text-gray-500 hover:text-white" onClick={(e) => handleScroll('hero', e)}>Home</a>
