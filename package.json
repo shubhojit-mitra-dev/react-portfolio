@@ -11,6 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nextui-org/accordion": "^2.0.40",
+    "@nextui-org/react": "^2.4.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0"
