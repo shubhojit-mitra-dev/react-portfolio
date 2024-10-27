@@ -29,7 +29,7 @@ const NavBar = () => {
                     <a href="#contact" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('contact', e)}>Contact</a>
                 </div>
                 <div className="sm:hidden">
-                    <button onClick={toggleMenu} className="text-white focus:outline-none">
+                    <button name='menu' onClick={toggleMenu} className="text-white focus:outline-none">
                         <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 18L20 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round"/>
                             <path d="M4 12L20 12" stroke="#ffffff" strokeWidth="2" strokeLinecap="round"/>
