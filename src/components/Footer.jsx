@@ -26,7 +26,8 @@ const Footer = () => {
 
     emailjs.send(serviceID, templateID, templateParams, PUBLIC_KEY)
     .then((response) => {
-      console.log("Email sent successfully!", response);
+      alert("Thank you for your message! Please check your email for a confirmation.");
+      console.log(response);
       setFirstName('');
       setLastName('');
       setEmail('');
