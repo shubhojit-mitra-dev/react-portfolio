@@ -19,10 +19,10 @@ import vscIcon from '../assets/vscode.svg';
 
 const TechStack = () => {
   return (
-    <div className='relative flex justify-center items-center p-4' style={{ height: 'calc(100vh - 4rem)' }}>
+    <div className='relative flex justify-center items-center p-4 sm:mb-0' style={{ height: 'calc(100vh - 4rem)' }}>
       <div className='absolute top-0 left-0 w-full h-full bg-black opacity-75'></div>
       <div className='relative text-center'>
-        <h1 className='text-white text-3xl sm:text-5xl font-bold mb-12 mt-60 sm:mt-0'>👨‍💻 Tech Stack</h1>
+        <h1 className='text-white text-3xl sm:text-5xl font-bold mb-12 mt-0 sm:mt-0'>👨‍💻 Tech Stack</h1>
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-2'>
           <TranslucentTab content="HTML" icon={htmlIcon} link="https://developer.mozilla.org/en-US/docs/Web/HTML" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="CSS" icon={cssIcon} link="https://developer.mozilla.org/en-US/docs/Web/CSS" size="px-10 py-5 border col-span-1" />

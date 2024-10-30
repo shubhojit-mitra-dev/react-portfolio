@@ -26,7 +26,7 @@ const NavBar = () => {
                     <a href="#home" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('hero', e)}>Home</a>
                     <a href="#about" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('about', e)}>About</a>
                     <a href="#projects" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('projects', e)}>Projects</a>
-                    <a href="#contact" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('contact', e)}>Contact</a>
+                    <a href="#contact" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('footer', e)}>Contact</a>
                 </div>
                 <div className="sm:hidden">
                     <button name='menu' onClick={toggleMenu} className="text-white focus:outline-none">
@@ -42,7 +42,7 @@ const NavBar = () => {
                 <a href="#home" className="mt-8 underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('hero', e)}>Home</a>
                 <a href="#about" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('about', e)}>About</a>
                 <a href="#projects" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('projects', e)}>Projects</a>
-                <a href="#contact" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('contact', e)}>Contact</a>
+                <a href="#contact" className="underline-animation text-gray-300 hover:text-white" onClick={(e) => handleScroll('footer', e)}>Contact</a>
             </div>
         </nav>
     );

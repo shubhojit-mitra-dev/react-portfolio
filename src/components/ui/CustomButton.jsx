@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomButton = ({ content, icon, variant, link, size }) => {
+const CustomButton = ({ content, icon, variant, link, size, onClick }) => {
   const baseClasses = 'rounded-md flex items-center space-x-2 transition duration-300 ease-in-out shadow-lg';
   const variantClasses = variant === 'blue'
     ? 'bg-blue-500 text-white hover:bg-blue-900'
@@ -19,7 +19,7 @@ const CustomButton = ({ content, icon, variant, link, size }) => {
   };
 
   return (
-    <a href={link} className={`${baseClasses} ${variantClasses} ${sizeClasses[size]}`}>
+    <a href={link} onClick={onClick} className={`${baseClasses} ${variantClasses} ${sizeClasses[size]}`}>
       {icon && <img src={icon} alt="" className={iconSizeClasses[size]} />}
       <span>{content}</span>
     </a>
