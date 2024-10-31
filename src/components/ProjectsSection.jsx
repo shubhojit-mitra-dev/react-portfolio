@@ -68,7 +68,7 @@ const ProjectsSection = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="translucent p-4 rounded-lg shadow-lg flex flex-col items-center"
+                className="translucent transition-transform duration-300 hover:scale-105 p-4 rounded-lg shadow-lg flex flex-col items-center"
                 onMouseEnter={() => handleMouseEnter(project.description)}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
