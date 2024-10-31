@@ -14,10 +14,20 @@ import mysqlIcon from '../assets/mysql.svg';
 import nextIcon from '../assets/nextjs.svg';
 import figmaIcon from '../assets/figma.svg';
 import ghIcon from '../assets/github.svg';
-import dockerIcon from '../assets/docker.svg';
+import shadcnIcon from '../assets/shadcn.svg';
 import vscIcon from '../assets/vscode.svg';
+import CustomButton from './ui/CustomButton';
 
 const TechStack = () => {
+
+  const handleScroll = (id, event) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='relative flex justify-center items-center p-4 sm:mb-0' style={{ height: 'calc(100vh - 4rem)' }}>
       <div className='absolute top-0 left-0 w-full h-full bg-black opacity-75'></div>
@@ -32,14 +42,17 @@ const TechStack = () => {
           <TranslucentTab content="React" icon={reactIcon} link="https://reactjs.org/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="Tailwind CSS" icon={twIcon} link="https://tailwindcss.com/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="TypeScript" icon={tsIcon} link="https://www.typescriptlang.org/" size="px-10 py-5 border col-span-1" />
-          <TranslucentTab content="Node.js" icon={nodeIcon} link="https://nodejs.org/" size="px-10 py-5 border col-span-1" />
+          <TranslucentTab content="Shadcn" icon={shadcnIcon} link="https://ui.shadcn.com/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="Git" icon={gitIcon} link="https://git-scm.com/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="GitHub" icon={ghIcon} link="https://www.github.com/" size="px-10 py-5 border col-span-1" />
-          <TranslucentTab content="Figma" icon={figmaIcon} link="https://www.figma.com/" size="px-10 py-5 border col-span-1" />
+          <TranslucentTab content="Node.js" icon={nodeIcon} link="https://nodejs.org/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="VS Code" icon={vscIcon} link="https://code.visualstudio.com/" size="px-10 py-5 border col-span-1" />
-          <TranslucentTab content="Docker" icon={dockerIcon} link="https://www.docker.com/" size="px-10 py-5 border col-span-1" />
+          <TranslucentTab content="Figma" icon={figmaIcon} link="https://www.figma.com/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="MySQL" icon={mysqlIcon} link="https://www.mysql.com/" size="px-10 py-5 border col-span-1" />
           <TranslucentTab content="C++" icon={cppIcon} link="https://isocpp.org/" size="px-10 py-5 border col-span-1" />
+        </div>
+        <div className='flex justify-center mt-7 cursor-pointer' onClick={(e) => handleScroll('projects', e)}>
+            <CustomButton content={"Built with These Technologies"} variant={"blue"} size={"xl"} />
         </div>
       </div>
     </div>

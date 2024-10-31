@@ -73,10 +73,10 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-black text-white p-8">
+    <footer className="bg-black text-white p-8 pt-20 pb-20">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-start">
         <div className="mb-8 md:mb-0">
-          <a href="#home" className="text-white text-3xl sm:text-3xl font-bold font-mono glowing-text">&lt;ShubhojitMitra /&gt;</a>
+          <a href="#home" className="text-white text-xl sm:text-3xl font-bold font-mono glowing-text">&lt;ShubhojitMitra /&gt;</a>
           <nav className="mt-5 flex flex-col space-y-2">
             <a onClick={(e) => handleScroll('hero', e)} className="hover:underline cursor-pointer">Home</a>
             <a onClick={(e) => handleScroll('about', e)} className="hover:underline cursor-pointer">About</a>

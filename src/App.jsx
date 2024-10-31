@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import TechStack from './components/TechStack';
-// import ProjectsSection from './components/ProjectsSection';
+import ProjectsSection from './components/ProjectsSection';
 import Footer from './components/Footer';
 import videoBg from './assets/videoBg.mp4';
 import './App.css'
@@ -22,6 +22,9 @@ const App = () => {
       </div>
       <div id="tech-stack">
         <TechStack />
+      </div>
+      <div id="projects">
+        <ProjectsSection />
       </div>
       <div id="footer">
         <Footer />
