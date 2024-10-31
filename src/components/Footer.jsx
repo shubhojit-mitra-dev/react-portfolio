@@ -62,6 +62,14 @@ const Footer = () => {
 
   }
 
+  const handleScroll = (id, event) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 
 
   return (
@@ -70,11 +78,11 @@ const Footer = () => {
         <div className="mb-8 md:mb-0">
           <a href="#home" className="text-white text-3xl sm:text-3xl font-bold font-mono glowing-text">&lt;ShubhojitMitra /&gt;</a>
           <nav className="mt-5 flex flex-col space-y-2">
-            <a href="#home" className="hover:underline">Home</a>
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#techstack" className="hover:underline">TechStack</a>
-            <a href="#projects" className="hover:underline">Projects</a>
-            <a href="#contact" className="hover:underline">Contact</a>
+            <a onClick={(e) => handleScroll('hero', e)} className="hover:underline cursor-pointer">Home</a>
+            <a onClick={(e) => handleScroll('about', e)} className="hover:underline cursor-pointer">About</a>
+            <a onClick={(e) => handleScroll('tech-stack', e)} className="hover:underline cursor-pointer">TechStack</a>
+            <a onClick={(e) => handleScroll('projects', e)} className="hover:underline cursor-pointer">Projects</a>
+            <a onClick={(e) => handleScroll('footer', e)} className="hover:underline cursor-pointer">Contact</a>
           </nav>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/3">
@@ -85,7 +93,7 @@ const Footer = () => {
                 type="text" 
                 name="firstName"
                 placeholder="First Name" 
-                className="w-1/2 p-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-1/2 p-2 bg-white text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 required
@@ -94,7 +102,7 @@ const Footer = () => {
                 type="text" 
                 name="lastName"
                 placeholder="Last Name" 
-                className="w-1/2 p-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                className="w-1/2 p-2 bg-white text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 required
@@ -104,7 +112,7 @@ const Footer = () => {
               type="email" 
               name="email"
               placeholder="Email Address" 
-              className="w-full p-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              className="w-full p-2 bg-white text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -112,7 +120,7 @@ const Footer = () => {
             <textarea 
               name="message"
               placeholder="Your Message" 
-              className="w-full p-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              className="w-full p-2 bg-white text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
               rows="4"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
