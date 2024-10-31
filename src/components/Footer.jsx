@@ -8,10 +8,19 @@ const Footer = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (isSubmitting) {
+      alert(`Please wait ${cooldown} seconds before submitting again.`);
+      return;
+    }
+
+    setIsSubmitting(true);
+    setCooldown(60);
     
     const serviceID = 'service_k08nj3s';
     const templateID = 'template_a5x8z2b';
@@ -23,6 +32,8 @@ const Footer = () => {
       from_email: email,
       message: message,
     }
+
+    emailjs.init
 
     emailjs.send(serviceID, templateID, templateParams, PUBLIC_KEY)
     .then((response) => {
@@ -36,6 +47,19 @@ const Footer = () => {
     .catch((error) => {
       console.error("Email failed to send!", error);
     })
+    .finally(() => {
+      const timer = setInterval(() => {
+        setCooldown((prev) => {
+          if (prev <= 1) {
+            clearInterval(timer);
+            setIsSubmitting(false);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    });
+
   }
 
 
@@ -97,7 +121,8 @@ const Footer = () => {
             <button 
               type="submit" 
               className="w-full p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
-            >Submit
+              disabled={isSubmitting}
+            >{isSubmitting ? `Please Wait ${cooldown} seconds...` : 'Submit'}
             </button>
           </form>
         </div>
