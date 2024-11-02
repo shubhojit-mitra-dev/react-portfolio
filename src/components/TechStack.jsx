@@ -29,7 +29,7 @@ const TechStack = () => {
   };
 
   return (
-    <div className='relative flex justify-center items-center p-4 sm:mb-0' style={{ height: 'calc(100vh - 4rem)' }}>
+    <div className='relative flex justify-center items-center p-4 sm:mb-0' style={{ height: 'calc(100vh + 4rem)' }}>
       <div className='absolute top-0 left-0 w-full h-full bg-black opacity-75'></div>
       <div className='relative text-center'>
         <h1 className='text-white text-3xl sm:text-5xl font-bold mb-12 mt-0 sm:mt-0'>👨‍💻 Tech Stack</h1>

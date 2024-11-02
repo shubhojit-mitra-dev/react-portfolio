@@ -30,8 +30,8 @@ const ProjectsSection = () => {
     },
     {
       name: 'Full-Stack AI Project',
-      image: workInProgress,
-      github: '',
+      image: null,
+      github: null,
       description: 
         "An innovative full-stack AI project being built with Next.js, featuring responsive UI, secure user authentication, and dynamic content generation powered by advanced API integrations."
     }
@@ -57,11 +57,10 @@ const ProjectsSection = () => {
     <>
       <div
         className="relative grid justify-center items-center p-4 sm:mb-0"
-        style={{ minHeight: 'calc(100vh - 4rem)' }}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-75"></div>
         <div className="relative text-center w-full">
-          <h1 className="text-white text-3xl sm:text-5xl font-bold mb-12 mt-0 sm:mt-0">
+          <h1 className="text-white text-3xl sm:text-5xl font-bold mb-12 mt-20 sm:mt-0">
             🚀 Projects
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:m-20">
@@ -74,13 +73,14 @@ const ProjectsSection = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <img
-                  src={project.image}
+                  src={project.image ?? workInProgress}
                   alt={project.name}
-                  className="rounded-lg w-full h-48 object-cover"
+                  className="rounded-lg w-full object-cover"
                 />
                 <h2 className="text-white text-xl font-bold mt-4">{project.name}</h2>
                 <a
-                  href={project.github ? project.github : ''}                 target="_blank"
+                  href={project.github ?? ''}                 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-bold mt-2 bg-black px-4 py-2 rounded-lg flex items-center"
                   onClick={(e) => {
