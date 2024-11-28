@@ -10,7 +10,7 @@ import instaIcon from '../assets/instagram.svg';
 const HeroSection = () => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 640px)' });
 
-  const resumeLink = '/react-portfolio/resume.pdf';
+  const resumeLink = '/resume.pdf';
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
