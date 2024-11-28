@@ -3,6 +3,7 @@ import open from '../assets/open-link.svg';
 import ghIcon from '../assets/github.svg';
 import thundermailPythonSDK from '../assets/thundermail-python-sdk.png';
 import mentorHub from '../assets/mentorHub.png';
+import zeniski from '../assets/zeniski.png'
 import workInProgress from '../assets/work-in-progress.png';
 
 const ProjectsSection = () => {
@@ -29,11 +30,11 @@ const ProjectsSection = () => {
         "A hackathon frontend project built with Next.js, TypeScript, and Tailwind CSS, designed to connect mentors and entrepreneurs. Offers a seamless user experience for professional networking and mentorship.",
     },
     {
-      name: 'Full-Stack AI Project',
-      image: null,
-      github: null,
+      name: 'Zeniski',
+      image: zeniski,
+      github: 'https://github.com/shubhojit-mitra-dev/zeniski',
       description: 
-        "An innovative full-stack AI project being built with Next.js, featuring responsive UI, secure user authentication, and dynamic content generation powered by advanced API integrations."
+        "An AI-powered task management application built with a robust Next.js, Tailwind CSS, and TypeScript tech stack. It features a user-friendly dashboard for seamless task creation and organization, enhanced by Gemini-powered AI that automatically generates optimized roadmaps for each task. Secure user authentication is handled by Clerk, while MongoDB ensures reliable and scalable data storage, offering users a comprehensive and efficient solution for managing their tasks"
     }
   ];
 
